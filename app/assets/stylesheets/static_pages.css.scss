@@ -1,7 +1,10 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$blue-header: #043c57;
+$basic-font: "Verdana",sans-serif;
+$blue-header: #03344C linear-gradient(#043c57,#042d43);
+$level-one: 0px 1px 2px rgba(0,0,0,.12), 0px 1px 1px rgba(0,0,0,.24);
+$level-two: 0px 3px 3px rgba(0,0,0,.16), 0px 3px 3px rgba(0,0,0,.23);
 @mixin box-shadow($level-one) {
 	-webkit-box-shadow: $level-one;
 	-moz-box-shadow: $level-one;
@@ -12,27 +15,89 @@ $blue-header: #043c57;
 body {
 	margin: 0;
 	padding: 0;
+	font-family: $basic-font
 }
 #primary-nav {
+	position: fixed;
+	float: left;
+	z-index: 500;
+	width: 100%;
 	margin: 0;
 	background: $blue-header;
-	@include box-shadow(0px 10px 10px #000);
+	@include box-shadow($level-one);
 
 	ul {
 		margin: 0;
+		padding: 0;
 		color: #fff;
 		text-align: center;
+		border-bottom: none;
 	}
 
 	li {
 		list-style: none;
 		display: inline-block;
+		overflow: hidden;
 	}
 
 	a {
 		text-decoration: none;
 		display: block;
-		padding: 6px 12px;
+		padding: 12px 15px;
 		color: #fff;
+	}
+
+	#usaa-logo {
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		top: 0;
+		margin-left: 15px; 
+		border: 5px solid #003560;
+		border-radius: 8px;
+		margin-top: -10px;
+		background: #FEFFFE;
+		background-image: -webkit-radial-gradient(center center, circle contain, #fefffe 0, #e5f2fb 100%);
+		line-height: 0;
+		text-indent: -1000px;
+		text-align: center;
+		@include box-shadow($level-one);
+		a {
+			position: absolute;
+			top: 8px;
+			left: 10px;
+			background: url(./usaa_mobile_sprite_global.png) no-repeat;
+			padding: 50px 50px 0 0;
+		}
+	}
+
+	#primary-logon {
+		background: #43748F;
+	}
+}
+
+#secondary-nav {
+	clear: left;
+	float: right;
+}
+
+#hero-image {
+	clear: both;
+	background: url(./san-antonio.jpg) no-repeat;
+	background-size: 100%;
+	background-position: 50% 50%;
+	vertical-align: middle;
+	width: 100%;
+	height: 500px;
+
+	#main-search-box {
+		display: inline-block;
+		position: relative;
+		left: 50%;
+		top: 50%;
+		background: #fff;
+		box-shadow: $level-one;
+		width: 500px;
+		margin-left: -250px;
 	}
 }
