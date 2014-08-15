@@ -1,8 +1,12 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$basic-font: "Verdana",sans-serif;
-$blue-header: #03344C linear-gradient(#043c57,#042d43);
+html {
+	font-size: 100%;
+}
+$basic-font: "Roboto", "Source Sans Pro", sans-serif;
+$heading-font: "Roboto Slab", serif;
+$blue-header: linear-gradient(rgba(4,60,87,.9), rgba(4,45,67,.9));
 $level-one: 0px 1px 2px rgba(0,0,0,.12), 0px 1px 1px rgba(0,0,0,.24);
 $level-two: 0px 3px 3px rgba(0,0,0,.16), 0px 3px 3px rgba(0,0,0,.23);
 @mixin box-shadow($level-one) {
@@ -18,6 +22,7 @@ body {
 	font-family: $basic-font
 }
 #primary-nav {
+	font-size: 1rem;
 	position: fixed;
 	float: left;
 	z-index: 500;
@@ -25,11 +30,12 @@ body {
 	margin: 0;
 	background: $blue-header;
 	@include box-shadow($level-one);
+	font-family: $basic-font;
 
 	ul {
 		margin: 0;
 		padding: 0;
-		color: #fff;
+		color: rgba(255,255,255,.9);
 		text-align: center;
 		border-bottom: none;
 	}
@@ -43,7 +49,7 @@ body {
 	a {
 		text-decoration: none;
 		display: block;
-		padding: 12px 15px;
+		padding: .5rem 1rem;
 		color: #fff;
 	}
 
@@ -89,15 +95,73 @@ body {
 	vertical-align: middle;
 	width: 100%;
 	height: 500px;
+	border-bottom: 2px solid #43748F;
 
 	#main-search-box {
 		display: inline-block;
 		position: relative;
 		left: 50%;
 		top: 50%;
-		background: #fff;
+		background: rgba(255,255,255,.9);
 		box-shadow: $level-one;
-		width: 500px;
-		margin-left: -250px;
+		width: 35rem;
+		margin-left: -17.5rem;
+		margin-top: -1rem;
+		border-radius: 2px;
+		padding: .5rem 1rem;
+
+		h1 {
+		font-family: $heading-font;
+		color: rgba(4,45,67,.9);
+		font-size: 1.5rem;
+		margin: 0;
+
+		}
+
+		input[type="text"] {
+			margin: 1rem 0rem;
+			width: 28rem;
+			border: 1px solid #43748F;
+			border-radius: 2px;
+			background: rgba(255,255,255,1);
+			font-size: 1.1rem;
+			padding: .3rem;
+			font-family: $basic-font;
+			box-shadow: $level-one;
+		}
+
+		input[type="button"] {
+			margin: 1rem 0rem;
+			font-size: 1.2rem;
+			padding: .3rem 1rem;
+			border: 1px solid rgba(4,45,67,1);
+			background: #43748F;
+			border-radius: 2px;
+			font-family: $basic-font;
+			box-shadow: $level-one;
+			color: rgba(255,255,255,.9)
+		}
+
+
+
+	}
+
+	#location-label {
+			color: rgba(255,255,255,.9);
+			text-shadow: $level-two;
+			font-family: $heading-font;
+			float: right;
+			position: relative;
+			top: 95%;
+			right: 5%;
+		}
+}
+
+#main-content {
+	width: 50rem;
+	margin: 0 auto;
+
+	h2 {
+		font-family: $heading-font;
 	}
 }
