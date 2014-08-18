@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://weloveiconfonts.com/api/?family=entypo' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(document).scroll(function () {
+        var scroll = $(this).scrollTop();
+        var topDist = $("#main-content").position();
+        if (scroll > topDist.top) {
+            $('#secondary-nav').css({"position":"fixed", "display":"block","top":"0"});
+        } else {
+            $('#secondary-nav').css({"display":"none"});
+        }
+    });
+});
+</script>
 </head>
 <body>
 
