@@ -1,15 +1,17 @@
 <% provide(:title, 'Find Homes for Sale and for Rent') %>
 <div id="primary-nav">
 <div class="inner">
+
 <ul>
-<li><a href="#"><span class="entypo-home" data-text="home"> <span>Home Circle</a></li>
-<li><a href="#">Buying</a></li>
-<li><a href="#">Renting</a></li>
-<li><a href="#">Selling</a></li>
-<li><a href="#">Mortgage &amp; Insurance</a></li>
-<li><a href="#">Advice</a></li>
-<li><a href="#" id="primary-logon">Log On</a></li>
-<li id="usaa-logo"><a href="#">USAA</a></li>
+<li class="mobile mobile-only"><a href="#"><span class="entypo-menu" data-text="menu"></span></a></li>
+<li class="mobile" id="homecircle-logo"><a href="#"><span class="entypo-home" data-text="home"> <span>Home Circle</a></li>
+<li class="non-mobile"><a href="#">Buying</a></li>
+<li class="non-mobile"><a href="#">Renting</a></li>
+<li class="non-mobile"><a href="#">Selling</a></li>
+<li class="non-mobile"><a href="#">Mortgage &amp; Insurance</a></li>
+<li class="non-mobile"><a href="#">Advice</a></li>
+<li class="mobile"><a href="#" id="primary-logon">Log On</a></li>
+<li class="mobile" id="usaa-logo"><a href="#">USAA</a></li>
 </ul>
 </div>
 </div>
@@ -18,7 +20,7 @@
 <form>
 <a href="#" class="search-toggle">Buying <span class="entypo-down-open-mini" data-text="down-open"></span></a>
 <input type="text" placeholder="City, ZIP, Neighborhood or Military Base" id="main-search-box" />
-<button class="entypo-search" data-text="search"> Search</button>
+<button class="entypo-search" data-text="search"><span class="non-mobile"> Search</span></button>
 </form>
 </div>
 </div>
@@ -27,7 +29,7 @@
 <div id="top-heading">
 <h1>Find Your Next Home on Home Circle</h1>
 <h2>Get up to $6,000
-<span id="moversadvantage">when you buy or sell your home through the <br>USAA MoversAdvantage® program<sup>1</sup></span></h2>
+<span id="moversadvantage">when you buy or sell your home through the <br>USAA MoversAdvantage<sup>&reg;</sup> program<sup>1</sup></span></h2>
 <a href="#" id="top-ma-cta">Learn More</a>
 </div>
 </div>
@@ -37,7 +39,7 @@
 <form>
 <a href="#" class="search-toggle">Buying <span class="entypo-down-open-mini" data-text="down-open"></span></a>
 <input type="text" placeholder="City, ZIP, Neighborhood or Military Base" />
-<button type="submit" class="entypo-search icon-search" data-text="search"> Search</button>
+<button type="submit" class="entypo-search icon-search" data-text="search"><span class="non-mobile"> Search</span></button>
 </form>
 </div>
 </div>
